@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3000;
 let tasks = [];
 let id = 1;
 
+app.get("/", (req, res) => {
+  res.send("API running 🚀");
+});
+
 // GET all tasks
 app.get("/tasks", (req, res) => {
   res.json(tasks);
